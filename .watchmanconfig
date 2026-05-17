@@ -1,0 +1,5 @@
+{
+  "settle": 80,
+  "fsevents_latency": 0.01,
+  "ignore_dirs": [".git", "node_modules", "cdk.out"]
+}

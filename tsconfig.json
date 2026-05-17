@@ -1,0 +1,18 @@
+{
+  "extends": "@deftomat/opinionated/configs/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "ESNext.Collection", "DOM"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "target": "ES2022",
+    "isolatedModules": true,
+    "types": ["node"]
+  },
+  "exclude": ["**/.git/", "**/node_modules/", "**/cdk.out/"]
+}
