@@ -3,8 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { parse } from './parser';
 
 function App() {
-  const [ignore, setIgnore] = useState('');
-
   const [result, setResult] = useState<Awaited<ReturnType<typeof parse>> | undefined>();
 
   return (

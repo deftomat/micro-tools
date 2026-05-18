@@ -1,6 +1,12 @@
 import { build } from 'esbuild';
+import { cpSync, rmSync } from 'fs';
 
-export async function buildTools() {
+export async function run() {
+  const buildDir = `${__dirname}/build`;
+
+  rmSync(buildDir, { recursive: true, force: true });
+  cpSync(`${__dirname}/public`, buildDir, { recursive: true, force: true });
+
   await build({
     entryPoints: [`${__dirname}/src/index.tsx`],
     bundle: true,
@@ -8,8 +14,8 @@ export async function buildTools() {
     sourcemap: true,
     target: 'es2024',
     format: 'esm',
-    outdir: 'public',
+    outdir: buildDir,
   });
 }
 
-buildTools();
+run();

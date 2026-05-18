@@ -13,8 +13,6 @@ cdk.out
 .DS_Store
 .history
 
-**/schema.types.ts
-
 *.tsbuildinfo
 
-testCommand.ts
+.build

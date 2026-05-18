@@ -2,6 +2,11 @@
   "name": "@deftomat/micro-tools",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "serve": "serve build",
+    "build": "everlution-node build.ts",
+    "deploy": "everlution-node build.ts && gh-pages -d .build"
+  },
   "devDependencies": {
     "serve": "^14.2.6",
     "fast-xml-parser": "^5.8.0",
@@ -12,6 +17,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/node": "^22.0.0",
     "@deftomat/opinionated": "^1.1.4",
+    "gh-pages": "^6.3.0",
     "typescript": "^6.0.3"
   },
   "volta": {
