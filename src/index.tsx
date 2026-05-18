@@ -4,6 +4,7 @@ import { parse } from './parser';
 
 function App() {
   const [result, setResult] = useState<Awaited<ReturnType<typeof parse>> | undefined>();
+  const [processing, setProcessing] = useState(false);
 
   return (
     <>
@@ -11,9 +12,14 @@ function App() {
 
       <div style={{ marginBottom: '1rem' }}>
         <button
-          onClick={async () => {
-            const result = await parse();
-            setResult(result);
+          onClick={() => {
+            setProcessing(true);
+
+            setTimeout(async () => {
+              const result = await parse();
+              setProcessing(false);
+              setResult(result);
+            }, 0);
           }}
         >
           Nahrať XML s účtovným denníkom
@@ -31,6 +37,9 @@ function App() {
           <div>
             <strong>Neshody:</strong> {result.mismatches.length.toLocaleString()}
           </div>
+
+          {processing && <div style={{ marginTop: '1em' }}>Spracovávam...</div>}
+
           <div style={{ marginTop: '2em' }}>
             {result.mismatches.map((mismatch) => (
               <div style={{ marginBottom: '0.7em' }} key={mismatch.name}>
