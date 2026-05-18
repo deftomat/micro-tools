@@ -6,7 +6,7 @@
     "moduleResolution": "bundler",
     "noEmit": true,
     "skipLibCheck": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "sourceMap": false,
     "declaration": false,
     "declarationMap": false,

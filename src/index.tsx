@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { parse } from './parser';
 
@@ -25,10 +25,10 @@ function App() {
       {result && (
         <div>
           <div>
-            <strong>Počet "má dať":</strong> {result.totalCredit.toLocaleString()}
+            <strong>Počet "dal":</strong> {result.totalCredit.toLocaleString()}
           </div>
           <div>
-            <strong>Počet "dal":</strong> {result.totalDebit.toLocaleString()}
+            <strong>Počet "má dať":</strong> {result.totalDebit.toLocaleString()}
           </div>
           <div>
             <strong>Neshody:</strong> {result.mismatches.length.toLocaleString()}

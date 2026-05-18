@@ -71,9 +71,6 @@ export async function parse() {
     totalDebit: slspMap.size,
     mismatches,
   };
-
-  // console.log(`Total accounting items processed: ${total}`);
-  // console.log(`\nSLSP count: ${slspMap.size}, Other count: ${otherMap.size}`);
 }
 
 // Recursively find all act:accountingItem entries regardless of nesting depth
@@ -82,7 +79,7 @@ function findAccountingItems(obj) {
   if (Array.isArray(obj)) {
     return obj.flatMap((item) => findAccountingItems(item));
   }
-  const results = [];
+  const results: any[] = [];
   for (const key of Object.keys(obj)) {
     if (key === 'act:accountingItem') {
       const items = Array.isArray(obj[key]) ? obj[key] : [obj[key]];
