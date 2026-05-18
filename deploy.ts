@@ -31,6 +31,7 @@ function deploy() {
     run('git add -A', buildPath);
     run('git commit -m "Deploy to GitHub Pages"', buildPath);
     run(`git push -f ${remoteUrl} ${BRANCH}`, buildPath);
+    run('rm -rf .git', buildPath);
 
     console.log('✅ Deployment successful!');
   } catch (error) {
