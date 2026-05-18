@@ -31,9 +31,9 @@ function App() {
           <div>
             <strong>Neshody:</strong> {result.mismatches.length.toLocaleString()}
           </div>
-          <div style={{ marginTop: '1em' }}>
+          <div style={{ marginTop: '2em' }}>
             {result.mismatches.map((mismatch) => (
-              <div style={{ marginBottom: '0.5em' }} key={mismatch.name}>
+              <div style={{ marginBottom: '0.7em' }} key={mismatch.name}>
                 <strong>{mismatch.name}:</strong>{' '}
                 {mismatch.value.toLocaleString(undefined, { style: 'currency', currency: 'EUR' })}
               </div>

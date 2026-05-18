@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "serve build",
+    "serve": "serve .build",
     "build": "everlution-node build.ts",
     "deploy": "everlution-node build.ts && everlution-node deploy.ts"
   },
