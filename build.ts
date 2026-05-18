@@ -2,7 +2,7 @@ import { build } from 'esbuild';
 import { cpSync, rmSync } from 'fs';
 
 export async function run() {
-  const buildDir = `${__dirname}/build`;
+  const buildDir = `${__dirname}/.build`;
 
   rmSync(buildDir, { recursive: true, force: true });
   cpSync(`${__dirname}/public`, buildDir, { recursive: true, force: true });

@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "serve build",
     "build": "everlution-node build.ts",
-    "deploy": "everlution-node build.ts && gh-pages -d .build"
+    "deploy": "everlution-node build.ts && everlution-node deploy.ts"
   },
   "devDependencies": {
     "serve": "^14.2.6",
@@ -17,7 +17,6 @@
     "@types/react-dom": "^19.2.3",
     "@types/node": "^22.0.0",
     "@deftomat/opinionated": "^1.1.4",
-    "gh-pages": "^6.3.0",
     "typescript": "^6.0.3"
   },
   "volta": {
