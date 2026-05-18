@@ -16,7 +16,7 @@ function App() {
             setResult(result);
           }}
         >
-          Nahrať XML súbor s účtovným denníkom
+          Nahrať XML s účtovným denníkom
         </button>
       </div>
 
